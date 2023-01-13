@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Title</title>
+  </head>
+  <body>
+    <h1 class="text-center">Add employee</h1>
+    <div class="container">
+      <form action="" method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="first_name">Firstname</label>
+          <input type="text" id="first_name"  name="first_name" value="{{first_name}}" /><br />
+        </div>
+        <div class="mb-3">
+          <label for="last_name">Lastname</label>
+          <input type="text" id="last_name" name="last_name" value="{{last_name}}" /><br />
+        </div>
+        <div class="mb-3">
+          <label for="dept">Department</label>
+          <input type="number" id="dept" name="dept" value="{{dept}}" /><br />
+        </div>
+        <div class="mb-3">
+          <label for="salary">Salary</label>
+          <input type="number" id="salary" name="salary" value="{{salary}}" /><br />
+        </div>
+        <div class="mb-3">
+          <label for="role">Role</label>
+          <input type="number" name="role" id="role" value="{{role}}" /><br />
+        </div>
+        <div class="mb-3">
+          <label for="phone">Phone</label>
+          <input type="number" name="phone" id="phone" value="{{phone}}" /><br />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
